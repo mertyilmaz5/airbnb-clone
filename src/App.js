@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from "react";
+import data from "./data";
+import CardList from "./components/CardList";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          padding: "10px",
+        }}
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png"
+          alt="logo"
+          height={130}
+          width={400}
+        />{" "}
+        <span
+          style={{
+            fontWeight: "bolder",
+            fontSize: "5rem",
+            marginTop: "auto",
+            marginBottom: "auto",
+            marginLeft: "30px",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          {" "}
+          Clone{" "}
+        </span>
+      </div>
+      <CardList data={data} />
     </div>
   );
 }

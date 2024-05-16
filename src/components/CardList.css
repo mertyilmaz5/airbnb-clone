@@ -1,0 +1,22 @@
+/* CardList.css */
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-container,
+.skeleton-container {
+    opacity: 0;
+    transform: translateX(-20px);
+    /* Sadece başlangıçta sola kaydır */
+    /* transition: opacity 0.5s ease-out, transform 0.5s ease-out; */
+}
+
+.card-container.visible,
+.skeleton-container.visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Görünür olduğunda sola kaydırmayı sıfırla */
+}
